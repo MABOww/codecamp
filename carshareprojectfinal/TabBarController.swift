@@ -22,9 +22,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 		
 		sidebar = FrostedSidebar(itemImages: [
 			UIImage(named: "gear")!,
-			UIImage(named: "globe")!,
-			UIImage(named: "profile")!,
-			UIImage(named: "profile")!,
+			UIImage(named: "お金")!,
+			UIImage(named: "map")!,
+			UIImage(named: "trip")!,
 			UIImage(named: "profile")!,
 			UIImage(named: "profile")!,
 			UIImage(named: "star")!],
