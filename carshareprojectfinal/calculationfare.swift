@@ -28,10 +28,7 @@ class calculationfare{
     
     //ここは利用時間算出のための変数
     var utiltime : Int = 0
-    //ここはグラフ描写のための変数宣言
-    //var fareslist = [Int]()
-    
- 
+
     
     func timecalc (componentday : Int, dayrrow : Int, componenthour : Int, hourrow : Int, componenttime : Int,timerow : Int) -> Int{
         utiltime = 0
@@ -65,26 +62,30 @@ class calculationfare{
                 Fare_Pack6 = Pack6
                 Fare_Pack12 = Pack12 + 16.0 * distance
                 Fare_Pack24 = Pack24 + 16.0 * distance
-            }else if time <= 48.0{
+            }else if time > 24.0 && time <= 48.0{
                 Fare_short = 206 * time
                 Fare_Pack6 = Pack6 + 206 * (time - 24.0)
                 Fare_Pack12 = Pack12 + 16.0 * distance
                 Fare_Pack24 = Pack24 + 16.0 * distance
-            }else if time <= 72.0{
+            }else if time > 48.0 && time <= 72.0{
                 Fare_short = 206 * time
                 Fare_Pack6 = 0.0
                 Fare_Pack12 = Pack12 + 16.0 * distance + 206 * (time - 48.0)
                 Fare_Pack24 = Pack24 + 16.0 * distance
-            }else if time <= 120.0{
+            }else if time > 72.0 && time <= 120.0{
                 Fare_short = 206 * time
-                //Fare_Pack6 = Pack6 + 16.0 * distance + 206 * (time - 24.0)
-                //Fare_Pack12 = Pack12 + 16.0 * distance + 206 * (time - 48.0)
-                Fare_Pack24 = Pack24 + 16.0 * distance + 206 * (time - 96.0)
-            }else{
+                Fare_Pack6 = 0.0
+                Fare_Pack12 = 0.0
+                Fare_Pack24 = Pack24 + 16.0 * distance + 206 * (time - 72.0)
+            }else if time > 120.0{
+                Fare_Pack6 = 0.0
+                Fare_Pack12 = 0.0
+                Fare_Pack24 = 0.0
                 Fare_short = 206 * time
             }
             //配列に料金をセット
             var fares = [Int(Fare_short), Int(Fare_Pack6),Int(Fare_Pack12),Int(Fare_Pack24)]
+            print (fares)
             var Fare = fares[0]
             //print (fares)
             //料金計算
@@ -127,27 +128,32 @@ class calculationfare{
         if  time <= 24.0 {
             Fare_short = 206 * time
             Fare_Pack6 = Pack6
-        }else if time <= 48.0{
+            Fare_Pack12 = Pack12 + 16.0 * distance
+            Fare_Pack24 = Pack24 + 16.0 * distance
+        }else if time > 24.0 && time <= 48.0{
             Fare_short = 206 * time
             Fare_Pack6 = Pack6 + 206 * (time - 24.0)
             Fare_Pack12 = Pack12 + 16.0 * distance
-        }else if time <= 72.0{
+            Fare_Pack24 = Pack24 + 16.0 * distance
+        }else if time > 48.0 && time <= 72.0{
             Fare_short = 206 * time
-            //Fare_Pack6 = Pack6 + 206 * (time - 24.0)
+            Fare_Pack6 = 0.0
             Fare_Pack12 = Pack12 + 16.0 * distance + 206 * (time - 48.0)
             Fare_Pack24 = Pack24 + 16.0 * distance
-        }else if time <= 120.0{
+        }else if time > 72.0 && time <= 120.0{
             Fare_short = 206 * time
-            //Fare_Pack6 = Pack6 + 16.0 * distance + 206 * (time - 24.0)
-            //Fare_Pack12 = Pack12 + 16.0 * distance + 206 * (time - 48.0)
-            Fare_Pack24 = Pack24 + 16.0 * distance + 206 * (time - 96.0)
-        }else{
-        Fare_short = 206 * time
+            Fare_Pack6 = 0.0
+            Fare_Pack12 = 0.0
+            Fare_Pack24 = Pack24 + 16.0 * distance + 206 * (time - 72.0)
+        }else if time > 120.0{
+            Fare_Pack6 = 0.0
+            Fare_Pack12 = 0.0
+            Fare_Pack24 = 0.0
+            Fare_short = 206 * time
         }
         //配列に料金をセット
         var fares = [Int(Fare_short), Int(Fare_Pack6),Int(Fare_Pack12),Int(Fare_Pack24)]
         var Fare = fares[0]
-        print (fares)
         //料金計算
         for i in fares{
             if i != 0{
