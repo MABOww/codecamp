@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FBF556BD1E697A54000BDCFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF556BC1E697A54000BDCFA /* AppDelegate.swift */; };
+		FBF556BF1E697A54000BDCFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF556BE1E697A54000BDCFA /* ViewController.swift */; };
+		FBF556C21E697A54000BDCFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF556C01E697A54000BDCFA /* Main.storyboard */; };
+		FBF556C51E697A55000BDCFA /* carshareprojectfinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBF556C31E697A55000BDCFA /* carshareprojectfinal.xcdatamodeld */; };
+		FBF556C71E697A55000BDCFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF556C61E697A55000BDCFA /* Assets.xcassets */; };
+		FBF556CA1E697A55000BDCFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF556C81E697A55000BDCFA /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FBF556B91E697A54000BDCFA /* carshareprojectfinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carshareprojectfinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBF556BC1E697A54000BDCFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FBF556BE1E697A54000BDCFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FBF556C11E697A54000BDCFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FBF556C41E697A55000BDCFA /* carshareprojectfinal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = carshareprojectfinal.xcdatamodel; sourceTree = "<group>"; };
+		FBF556C61E697A55000BDCFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FBF556C91E697A55000BDCFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FBF556CB1E697A55000BDCFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBF556B61E697A54000BDCFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FBF556B01E697A54000BDCFA = {
+			isa = PBXGroup;
+			children = (
+				FBF556BB1E697A54000BDCFA /* carshareprojectfinal */,
+				FBF556BA1E697A54000BDCFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBF556BA1E697A54000BDCFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBF556B91E697A54000BDCFA /* carshareprojectfinal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBF556BB1E697A54000BDCFA /* carshareprojectfinal */ = {
+			isa = PBXGroup;
+			children = (
+				FBF556BC1E697A54000BDCFA /* AppDelegate.swift */,
+				FBF556BE1E697A54000BDCFA /* ViewController.swift */,
+				FBF556C01E697A54000BDCFA /* Main.storyboard */,
+				FBF556C61E697A55000BDCFA /* Assets.xcassets */,
+				FBF556C81E697A55000BDCFA /* LaunchScreen.storyboard */,
+				FBF556CB1E697A55000BDCFA /* Info.plist */,
+				FBF556C31E697A55000BDCFA /* carshareprojectfinal.xcdatamodeld */,
+			);
+			path = carshareprojectfinal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBF556B81E697A54000BDCFA /* carshareprojectfinal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBF556CE1E697A55000BDCFA /* Build configuration list for PBXNativeTarget "carshareprojectfinal" */;
+			buildPhases = (
+				FBF556B51E697A54000BDCFA /* Sources */,
+				FBF556B61E697A54000BDCFA /* Frameworks */,
+				FBF556B71E697A54000BDCFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = carshareprojectfinal;
+			productName = carshareprojectfinal;
+			productReference = FBF556B91E697A54000BDCFA /* carshareprojectfinal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBF556B11E697A54000BDCFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "井上正裕";
+				TargetAttributes = {
+					FBF556B81E697A54000BDCFA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 284D57RC3B;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FBF556B41E697A54000BDCFA /* Build configuration list for PBXProject "carshareprojectfinal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FBF556B01E697A54000BDCFA;
+			productRefGroup = FBF556BA1E697A54000BDCFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBF556B81E697A54000BDCFA /* carshareprojectfinal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBF556B71E697A54000BDCFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBF556CA1E697A55000BDCFA /* LaunchScreen.storyboard in Resources */,
+				FBF556C71E697A55000BDCFA /* Assets.xcassets in Resources */,
+				FBF556C21E697A54000BDCFA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBF556B51E697A54000BDCFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBF556BF1E697A54000BDCFA /* ViewController.swift in Sources */,
+				FBF556BD1E697A54000BDCFA /* AppDelegate.swift in Sources */,
+				FBF556C51E697A55000BDCFA /* carshareprojectfinal.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FBF556C01E697A54000BDCFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBF556C11E697A54000BDCFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FBF556C81E697A55000BDCFA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBF556C91E697A55000BDCFA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FBF556CC1E697A55000BDCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FBF556CD1E697A55000BDCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBF556CF1E697A55000BDCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 284D57RC3B;
+				INFOPLIST_FILE = carshareprojectfinal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = masacom.company.carshareprojectfinal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FBF556D01E697A55000BDCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 284D57RC3B;
+				INFOPLIST_FILE = carshareprojectfinal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = masacom.company.carshareprojectfinal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBF556B41E697A54000BDCFA /* Build configuration list for PBXProject "carshareprojectfinal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBF556CC1E697A55000BDCFA /* Debug */,
+				FBF556CD1E697A55000BDCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBF556CE1E697A55000BDCFA /* Build configuration list for PBXNativeTarget "carshareprojectfinal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBF556CF1E697A55000BDCFA /* Debug */,
+				FBF556D01E697A55000BDCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FBF556C31E697A55000BDCFA /* carshareprojectfinal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FBF556C41E697A55000BDCFA /* carshareprojectfinal.xcdatamodel */,
+			);
+			currentVersion = FBF556C41E697A55000BDCFA /* carshareprojectfinal.xcdatamodel */;
+			path = carshareprojectfinal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FBF556B11E697A54000BDCFA /* Project object */;
+}
