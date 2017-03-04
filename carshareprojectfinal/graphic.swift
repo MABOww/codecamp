@@ -14,8 +14,8 @@ import UIKit
     @IBInspectable var startColor: UIColor = UIColor.red
     @IBInspectable var endColor: UIColor = UIColor.green
     
-    // ダミーデータ
-    var graphPoints:[Int] = [1, 2, 3, 4, 5, 6, 7]
+    // 初期化
+    var graphPoints:[Int] = []
     
     // プロットデータ
     func setupPoints(points: [Int]) {
@@ -140,6 +140,47 @@ import UIKit
         
         linePath.lineWidth = 1.0
         linePath.stroke()
+        //graphPoints = ["2000/2/3", "2000/3/3", "2000/4/3", "2000/5/3", "2000/6/3", "2000/7/3", "2000/8/3"]
+        MemoriGraphDraw()
+    
     }
+    
+    var memoriMargin: CGFloat = 70 //横目盛の感覚
+    var graphHeight: CGFloat = 500 //グラフの高さ
+    
+    //横目盛・グラフを描画する
+    func MemoriGraphDraw() {
+        
+        var count:CGFloat = 0
+        for memori in graphPoints {
+            
+            let label = UILabel()
+            label.text = String(memori)
+            label.font = UIFont.systemFont(ofSize: 9)
+            
+            //ラベルのサイズを取得
+            let frame = CGSize(width : 250, height : CGFloat.greatestFiniteMagnitude)
+            let rect = label.sizeThatFits(frame)
+            
+            //ラベルの位置
+            var lebelX = (count * memoriMargin)-rect.width/2
+            
+            //最初のラベル
+            if Int(count) == 0{
+                lebelX = (count * memoriMargin)
+            }
+            
+            //最後のラベル
+            if Int(count+1) == graphPoints.count{
+                lebelX = (count * memoriMargin)-rect.width
+            }
+            
+            label.frame = CGRect(x : lebelX , y : graphHeight, width : rect.width, height : rect.height)
+            self.addSubview(label)
+            
+            count += 1
+        }
+    }
+    
 }
 

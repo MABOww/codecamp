@@ -13,7 +13,7 @@
         <!--Item-->
         <scene sceneID="qSd-5i-x6d">
             <objects>
-                <viewController id="yFd-Pw-cF0" customClass="ViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yFd-Pw-cF0" customClass="ViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="28J-8P-oJS"/>
                         <viewControllerLayoutGuide type="bottom" id="AhR-c2-Zoo"/>
@@ -62,7 +62,7 @@
         <!--View Controller-->
         <scene sceneID="lWc-99-BKQ">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="wsn-Gr-6uq" customClass="ViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="wsn-Gr-6uq" customClass="ViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="au1-Kd-8M0"/>
                         <viewControllerLayoutGuide type="bottom" id="ih7-Ly-jhN"/>
@@ -102,7 +102,7 @@
         <!--Item-->
         <scene sceneID="ZlK-Wb-2aS">
             <objects>
-                <viewController id="VA2-Zc-qCQ" customClass="ViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VA2-Zc-qCQ" customClass="ViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LDU-Sj-WQx"/>
                         <viewControllerLayoutGuide type="bottom" id="RWE-EN-EgE"/>
@@ -158,7 +158,7 @@
         <!--Item-->
         <scene sceneID="Kq1-a8-fjM">
             <objects>
-                <viewController id="dyF-pl-TPO" customClass="ViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dyF-pl-TPO" customClass="ViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fEK-vQ-Gwu"/>
                         <viewControllerLayoutGuide type="bottom" id="d7R-HY-Ojp"/>
@@ -196,7 +196,7 @@
         <!--Item-->
         <scene sceneID="7fk-0J-N8K">
             <objects>
-                <viewController id="j5D-bS-emu" customClass="ViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="j5D-bS-emu" customClass="ViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZHE-c1-eli"/>
                         <viewControllerLayoutGuide type="bottom" id="STV-0o-JBn"/>
@@ -248,10 +248,28 @@
             </objects>
             <point key="canvasLocation" x="399" y="1601"/>
         </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="wV5-MQ-5b1">
+            <objects>
+                <viewController id="gtA-5y-Rlh" customClass="ChartViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4aJ-fD-Qxa"/>
+                        <viewControllerLayoutGuide type="bottom" id="F16-aO-4d2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wxs-yd-Gao">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZ3-xl-jRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="3162"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6Ie-Xz-3lW">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="00u-vZ-mxX" customClass="TabBarController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="00u-vZ-mxX" customClass="TabBarController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="6jS-hB-otR">
@@ -275,7 +293,7 @@
         <scene sceneID="r2U-au-bHb">
             <objects>
                 <navigationController id="K3L-Xh-iZj" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DDM-Bl-Rpk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DDM-Bl-Rpk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -290,7 +308,7 @@
         <!--Choice View Controller-->
         <scene sceneID="L1e-mv-VeR">
             <objects>
-                <viewController id="UF0-rA-e3E" customClass="ChoiceViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UF0-rA-e3E" customClass="ChoiceViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Qn-nc-neF"/>
                         <viewControllerLayoutGuide type="bottom" id="f0b-wt-q5u"/>
@@ -392,13 +410,13 @@
         <!--Root View Controller-->
         <scene sceneID="tRE-oI-cKC">
             <objects>
-                <tableViewController id="Sbd-Ng-p4D" customClass="TableViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Sbd-Ng-p4D" customClass="TableViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="gFu-Pz-9ra">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="652"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0qZ-FX-5fb" customClass="TableViewCell" customModule="FrostedSidebar" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0qZ-FX-5fb" customClass="TableViewCell" customModule="carshareprojectfinal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0qZ-FX-5fb" id="w0j-7J-w1e">
@@ -461,7 +479,7 @@
         <!--Hotel Web View Controller-->
         <scene sceneID="IP4-jm-uDo">
             <objects>
-                <viewController id="0v2-S3-jg3" customClass="HotelWebViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0v2-S3-jg3" customClass="HotelWebViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wh8-ZA-cC3"/>
                         <viewControllerLayoutGuide type="bottom" id="HE3-HB-nck"/>
@@ -494,7 +512,7 @@
         <!--Web View Controller-->
         <scene sceneID="bFb-Ti-7N7">
             <objects>
-                <viewController id="84Y-Ad-mYK" customClass="WebViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="84Y-Ad-mYK" customClass="WebViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O29-3J-chz"/>
                         <viewControllerLayoutGuide type="bottom" id="X7o-Tq-7iN"/>
@@ -530,7 +548,7 @@
         <scene sceneID="nFa-d9-iKi">
             <objects>
                 <navigationController id="mcB-5A-gfG" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3cI-w4-L52">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3cI-w4-L52">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -545,7 +563,7 @@
         <!--Caluclatar View Controller-->
         <scene sceneID="7Uz-bn-QGA">
             <objects>
-                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qDK-K9-yPq" customClass="CaluclatarViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qDK-K9-yPq" customClass="CaluclatarViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SK1-hn-Gy8"/>
                         <viewControllerLayoutGuide type="bottom" id="C57-VA-4gv"/>
@@ -631,7 +649,7 @@
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adz-fU-mpJ" customClass="PickerTextField" customModule="FrostedSidebar" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adz-fU-mpJ" customClass="PickerTextField" customModule="carshareprojectfinal" customModuleProvider="target">
                                 <rect key="frame" x="24" y="134" width="232" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -653,7 +671,7 @@ HeWIqeeUqOaZgumWkw
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="シミュレータ"/>
                                 <connections>
-                                    <segue destination="LHC-4c-v7S" kind="show" id="HOL-jJ-K2G"/>
+                                    <segue destination="gtA-5y-Rlh" kind="show" id="nrs-xG-f0l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -674,16 +692,16 @@ HeWIqeeUqOaZgumWkw
         <!--Graphic View Controller-->
         <scene sceneID="5dS-6R-T5g">
             <objects>
-                <viewController id="LHC-4c-v7S" customClass="GraphicViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LHC-4c-v7S" customClass="GraphicViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="giP-c9-8fn"/>
                         <viewControllerLayoutGuide type="bottom" id="kGh-0s-8ix"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vv5-lY-DHc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4uO-e9-ylj" customClass="GraphView" customModule="FrostedSidebar" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4uO-e9-ylj" customClass="GraphView" customModule="carshareprojectfinal" customModuleProvider="target">
                                 <rect key="frame" x="1" y="20" width="374" height="532"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -710,7 +728,7 @@ HeWIqeeUqOaZgumWkw
         <!--Search View Controller-->
         <scene sceneID="07n-q2-9A4">
             <objects>
-                <viewController storyboardIdentifier="Next" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7xU-zk-09A" customClass="SearchViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Next" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7xU-zk-09A" customClass="SearchViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dZX-Sy-WQw"/>
                         <viewControllerLayoutGuide type="bottom" id="hmV-Xr-Mtt"/>
@@ -759,7 +777,7 @@ HeWIqeeUqOaZgumWkw
         <!--Root View Controller-->
         <scene sceneID="PoD-6K-pCM">
             <objects>
-                <tableViewController id="Sao-jl-oV5" customClass="configTableViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Sao-jl-oV5" customClass="configTableViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8gE-1Z-abG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -792,7 +810,7 @@ HeWIqeeUqOaZgumWkw
         <scene sceneID="79m-lB-hUE">
             <objects>
                 <navigationController id="N1h-cv-aTg" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t7V-qK-wp1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="t7V-qK-wp1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -807,7 +825,7 @@ HeWIqeeUqOaZgumWkw
         <!--Config View Controller-->
         <scene sceneID="Tlb-mP-m9E">
             <objects>
-                <viewController id="Vm9-u4-BcX" customClass="ConfigViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vm9-u4-BcX" customClass="ConfigViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tfA-t3-Dsb"/>
                         <viewControllerLayoutGuide type="bottom" id="sMV-k7-DAc"/>

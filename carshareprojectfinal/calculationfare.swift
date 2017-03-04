@@ -85,7 +85,7 @@ class calculationfare{
             }
             //配列に料金をセット
             var fares = [Int(Fare_short), Int(Fare_Pack6),Int(Fare_Pack12),Int(Fare_Pack24)]
-            print (fares)
+            //print (fares)
             var Fare = fares[0]
             //print (fares)
             //料金計算

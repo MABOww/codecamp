@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0338382839BB08F967D980E2 /* Pods_carshareprojectfinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBC4A5CBEAC38923D565949 /* Pods_carshareprojectfinal.framework */; };
+		FB72EACB1E69C65A000B78B5 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EACA1E69C65A000B78B5 /* ChartViewController.swift */; };
+		FB72EAD81E69C6E1000B78B5 /* PNBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EACD1E69C6E1000B78B5 /* PNBar.swift */; };
+		FB72EAD91E69C6E1000B78B5 /* PNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EACE1E69C6E1000B78B5 /* PNBarChart.swift */; };
+		FB72EADA1E69C6E1000B78B5 /* PNChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EACF1E69C6E1000B78B5 /* PNChartLabel.swift */; };
+		FB72EADB1E69C6E1000B78B5 /* PNColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EAD01E69C6E1000B78B5 /* PNColor.swift */; };
+		FB72EADC1E69C6E1000B78B5 /* PNPieChartDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EAD11E69C6E1000B78B5 /* PNPieChartDataItem.swift */; };
+		FB72EADD1E69C6E1000B78B5 /* PNGenericChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EAD21E69C6E1000B78B5 /* PNGenericChart.swift */; };
+		FB72EADE1E69C6E1000B78B5 /* PNLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EAD31E69C6E1000B78B5 /* PNLineChart.swift */; };
+		FB72EADF1E69C6E1000B78B5 /* PNLineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EAD41E69C6E1000B78B5 /* PNLineChartData.swift */; };
+		FB72EAE01E69C6E1000B78B5 /* PNLineChartDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EAD51E69C6E1000B78B5 /* PNLineChartDataItem.swift */; };
+		FB72EAE11E69C6E1000B78B5 /* PNPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EAD61E69C6E1000B78B5 /* PNPieChart.swift */; };
+		FB72EAE21E69C6E1000B78B5 /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72EAD71E69C6E1000B78B5 /* PNValue.swift */; };
 		FBA093FF1E697D2600453078 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA093FD1E697D2600453078 /* Alamofire.framework */; };
 		FBA094001E697D2600453078 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBA093FD1E697D2600453078 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBA094011E697D2600453078 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA093FE1E697D2600453078 /* SwiftyJSON.framework */; };
@@ -77,6 +89,18 @@
 		2692CB9BA206FC081EB3E6E0 /* Pods-carshareprojectfinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carshareprojectfinal.release.xcconfig"; path = "Pods/Target Support Files/Pods-carshareprojectfinal/Pods-carshareprojectfinal.release.xcconfig"; sourceTree = "<group>"; };
 		6DBC4A5CBEAC38923D565949 /* Pods_carshareprojectfinal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carshareprojectfinal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFE03A01343EE7F07DA66BC /* Pods-carshareprojectfinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carshareprojectfinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carshareprojectfinal/Pods-carshareprojectfinal.debug.xcconfig"; sourceTree = "<group>"; };
+		FB72EACA1E69C65A000B78B5 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		FB72EACD1E69C6E1000B78B5 /* PNBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBar.swift; sourceTree = "<group>"; };
+		FB72EACE1E69C6E1000B78B5 /* PNBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBarChart.swift; sourceTree = "<group>"; };
+		FB72EACF1E69C6E1000B78B5 /* PNChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartLabel.swift; sourceTree = "<group>"; };
+		FB72EAD01E69C6E1000B78B5 /* PNColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNColor.swift; sourceTree = "<group>"; };
+		FB72EAD11E69C6E1000B78B5 /* PNPieChartDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNPieChartDataItem.swift; sourceTree = "<group>"; };
+		FB72EAD21E69C6E1000B78B5 /* PNGenericChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNGenericChart.swift; sourceTree = "<group>"; };
+		FB72EAD31E69C6E1000B78B5 /* PNLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChart.swift; sourceTree = "<group>"; };
+		FB72EAD41E69C6E1000B78B5 /* PNLineChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChartData.swift; sourceTree = "<group>"; };
+		FB72EAD51E69C6E1000B78B5 /* PNLineChartDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChartDataItem.swift; sourceTree = "<group>"; };
+		FB72EAD61E69C6E1000B78B5 /* PNPieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNPieChart.swift; sourceTree = "<group>"; };
+		FB72EAD71E69C6E1000B78B5 /* PNValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNValue.swift; sourceTree = "<group>"; };
 		FBA093FD1E697D2600453078 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FBA093FE1E697D2600453078 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		FBA094061E6980E700453078 /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
@@ -156,6 +180,25 @@
 				2692CB9BA206FC081EB3E6E0 /* Pods-carshareprojectfinal.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB72EACC1E69C6BA000B78B5 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				FB72EACA1E69C65A000B78B5 /* ChartViewController.swift */,
+				FB72EACD1E69C6E1000B78B5 /* PNBar.swift */,
+				FB72EACE1E69C6E1000B78B5 /* PNBarChart.swift */,
+				FB72EACF1E69C6E1000B78B5 /* PNChartLabel.swift */,
+				FB72EAD01E69C6E1000B78B5 /* PNColor.swift */,
+				FB72EAD11E69C6E1000B78B5 /* PNPieChartDataItem.swift */,
+				FB72EAD21E69C6E1000B78B5 /* PNGenericChart.swift */,
+				FB72EAD31E69C6E1000B78B5 /* PNLineChart.swift */,
+				FB72EAD41E69C6E1000B78B5 /* PNLineChartData.swift */,
+				FB72EAD51E69C6E1000B78B5 /* PNLineChartDataItem.swift */,
+				FB72EAD61E69C6E1000B78B5 /* PNPieChart.swift */,
+				FB72EAD71E69C6E1000B78B5 /* PNValue.swift */,
+			);
+			name = Chart;
 			sourceTree = "<group>";
 		};
 		FBA094201E6982BB00453078 /* picture */ = {
@@ -242,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				FBF556BC1E697A54000BDCFA /* AppDelegate.swift */,
+				FB72EACC1E69C6BA000B78B5 /* Chart */,
 				FBA094571E698DD100453078 /* carsharecalculation */,
 				FBA094581E698EAB00453078 /* baseview */,
 				FBA094331E6983DC00453078 /* Main.storyboard */,
@@ -443,23 +487,35 @@
 			files = (
 				FBA0944A1E69844E00453078 /* TableViewCell.swift in Sources */,
 				FBA094501E69846400453078 /* WebViewController.swift in Sources */,
+				FB72EADF1E69C6E1000B78B5 /* PNLineChartData.swift in Sources */,
+				FB72EAD91E69C6E1000B78B5 /* PNBarChart.swift in Sources */,
 				FBF556BF1E697A54000BDCFA /* ViewController.swift in Sources */,
 				FBA094401E69840200453078 /* configTableViewController.swift in Sources */,
+				FB72EADB1E69C6E1000B78B5 /* PNColor.swift in Sources */,
+				FB72EAE21E69C6E1000B78B5 /* PNValue.swift in Sources */,
 				FBA094441E69842900453078 /* ConfigViewController.swift in Sources */,
 				FBA094221E69838500453078 /* TabBarController.swift in Sources */,
+				FB72EAD81E69C6E1000B78B5 /* PNBar.swift in Sources */,
 				FBA094481E69843A00453078 /* APITableViewController.swift in Sources */,
 				FBA094381E6983E800453078 /* graphic.swift in Sources */,
 				FBA094361E6983E300453078 /* GraphicViewController.swift in Sources */,
+				FB72EACB1E69C65A000B78B5 /* ChartViewController.swift in Sources */,
+				FB72EAE01E69C6E1000B78B5 /* PNLineChartDataItem.swift in Sources */,
 				FBA094521E69846900453078 /* HotelWebViewController.swift in Sources */,
+				FB72EADC1E69C6E1000B78B5 /* PNPieChartDataItem.swift in Sources */,
 				FBA0945D1E6990FC00453078 /* APIkey.swift in Sources */,
 				FBA094421E69840A00453078 /* calculationfare.swift in Sources */,
+				FB72EAE11E69C6E1000B78B5 /* PNPieChart.swift in Sources */,
 				FBA094461E69843500453078 /* SearchViewController.swift in Sources */,
+				FB72EADE1E69C6E1000B78B5 /* PNLineChart.swift in Sources */,
+				FB72EADD1E69C6E1000B78B5 /* PNGenericChart.swift in Sources */,
 				FBA0944C1E69845300453078 /* TableViewController.swift in Sources */,
 				FBF556BD1E697A54000BDCFA /* AppDelegate.swift in Sources */,
 				FBF556C51E697A55000BDCFA /* carshareprojectfinal.xcdatamodeld in Sources */,
 				FBA0944E1E69845E00453078 /* ItemData.swift in Sources */,
 				FBA0943A1E6983EE00453078 /* CaluclatarViewController.swift in Sources */,
 				FBA0943C1E6983F400453078 /* ChoiceViewController.swift in Sources */,
+				FB72EADA1E69C6E1000B78B5 /* PNChartLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

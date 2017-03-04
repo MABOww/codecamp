@@ -212,10 +212,9 @@ class CaluclatarViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 let json3 = legs[0]
                 let distance = json3["distance"]
                 //エラーハンドリング
-                //if distance["value"].int != nil{
+                if distance["value"].int != nil{
                 let distanceval = Double(distance["value"].int!)
-                    
-                //}
+                }
                 //
                 queque.async {
                     //ここで計算処理
@@ -237,7 +236,7 @@ class CaluclatarViewController: UIViewController, UIPickerViewDelegate, UIPicker
 //    
     //ここで値の受け渡し
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let graphicViewController:GraphicViewController = segue.destination as! GraphicViewController
+        let chartViewController:ChartViewController = segue.destination as! ChartViewController
         //グラフのx軸の数を取得
         let timecalc = self.carshare.timecalc(componentday : componentday, dayrrow : dayrrow, componenthour : componenthour, hourrow : hourrow, componenttime : componenttime,timerow : timerow)
         
@@ -246,8 +245,8 @@ class CaluclatarViewController: UIViewController, UIPickerViewDelegate, UIPicker
         //処理②利用料金を算出
         //self.timesfare = self.carshare.TimesSharingFare(time : Double(timecalc), distance : distanceval/1000 )
         self.cailfare.text = String(self.timesfare)
-        graphicViewController.timepoints = timecalc
-        graphicViewController.farepoints = farelist
+        chartViewController.timepoints = timecalc
+        chartViewController.farepoints = farelist
         //tableViewController.input = searchField.text!
         //tableViewController.checkindate = checkindate!
         //tableViewController.checkoutdate = checkoutdate!
