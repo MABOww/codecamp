@@ -41,13 +41,15 @@ class ChoiceViewController: UIViewController,UITextFieldDelegate  {
             self.view.addSubview(textField)
             textField.inputView = myDatePicker
             textField.inputAccessoryView = toolBar
-        default:
+        case 1:
             tag = 1
             textField2.placeholder = dateToString(date: Date()) //<-`dateToString`のパラメータは`Date`型なので最初から`Date()`を渡す
             textField2.text        = dateToString(date: Date()) //<-同上
             self.view.addSubview(textField2)
             textField2.inputView = myDatePicker
             textField2.inputAccessoryView = toolBar
+        default:
+            break
         }
     }
   

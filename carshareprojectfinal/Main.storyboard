@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZ3-xl-jRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="3162"/>
+            <point key="canvasLocation" x="1334" y="3221"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6Ie-Xz-3lW">
@@ -322,7 +322,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="チェックイン日を入力" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cLw-6B-u0i" customClass="YoshikoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="3" y="79" width="367" height="66"/>
+                                <rect key="frame" x="3" y="53" width="367" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.3021732271" green="0.26395642759999999" blue="0.55874562260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
@@ -336,9 +336,6 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
                                         <color key="value" red="0.92138004299999998" green="0.91652441019999997" blue="0.91664552690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBackgroundColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -349,15 +346,8 @@
                                     <action selector="pickerchoice:" destination="UF0-rA-e3E" eventType="touchDown" id="loI-9X-OUx"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="レール&amp;カー見積もり :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPp-ge-Vq7">
-                                <rect key="frame" x="8" y="337" width="180" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="施設名・滞在エリアを入力" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OYE-vh-Zwa" customClass="YoshikoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="4" y="232" width="367" height="66"/>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="施設名・滞在エリアを入力" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OYE-vh-Zwa" customClass="YoshikoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="4" y="188" width="367" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.3021732271" green="0.26395642759999999" blue="0.55874562260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
@@ -371,9 +361,6 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
                                         <color key="value" red="0.92138004299999998" green="0.91652441019999997" blue="0.91664552690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBackgroundColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -385,20 +372,8 @@
                                     <action selector="pickerchoice:" destination="UF0-rA-e3E" eventType="editingDidEnd" id="JHo-T5-Ufs"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA0-0g-6h0" customClass="Button" customModule="carshareprojectfinal" customModuleProvider="target">
-                                <rect key="frame" x="313" y="358" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Sbd-Ng-p4D" kind="show" identifier="godetail" id="wcJ-QW-ep4"/>
-                                </connections>
-                            </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C4s-Tw-V5P">
-                                <rect key="frame" x="215" y="332" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="チェックアウト日を入力" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yoi-Sh-DB9" customClass="YoshikoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="3" y="158" width="367" height="66"/>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="現地車利用時間" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="def-P1-CNK" customClass="YoshikoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="3" y="254" width="367" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.3021732271" green="0.26395642759999999" blue="0.55874562260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
@@ -413,8 +388,31 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
                                         <color key="value" red="0.92138004299999998" green="0.91652441019999997" blue="0.91664552690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBackgroundColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getStart:" destination="qDK-K9-yPq" eventType="editingDidEndOnExit" id="JbP-mr-qa8"/>
+                                    <action selector="hotelname:" destination="UF0-rA-e3E" eventType="editingDidEndOnExit" id="7Ss-qJ-aUh"/>
+                                    <action selector="pickerchoice:" destination="UF0-rA-e3E" eventType="editingDidEnd" id="02S-U4-8Pd"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="チェックアウト日を入力" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yoi-Sh-DB9" customClass="YoshikoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="3" y="121" width="367" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.3021732271" green="0.26395642759999999" blue="0.55874562260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                        <color key="value" red="0.3021732271" green="0.26395642759999999" blue="0.55874562260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
+                                        <color key="value" red="0.92138004299999998" green="0.91652441019999997" blue="0.91664552690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -425,6 +423,14 @@
                                     <action selector="pickerchoice:" destination="UF0-rA-e3E" eventType="touchDown" id="KnE-7p-wLO"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA0-0g-6h0" customClass="Button" customModule="carshareprojectfinal" customModuleProvider="target">
+                                <rect key="frame" x="313" y="331" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Sbd-Ng-p4D" kind="show" identifier="godetail" id="wcJ-QW-ep4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -521,26 +527,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="652"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlo-rK-Do9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="652"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zlo-rK-Do9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="448"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2e-RQ-h2w">
+                                <rect key="frame" x="0.0" y="535" width="394" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="近隣のステーション" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbv-ch-Os5">
+                                <rect key="frame" x="0.0" y="492" width="200" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="HE3-HB-nck" firstAttribute="top" secondItem="zlo-rK-Do9" secondAttribute="bottom" id="7PE-Pn-EWe"/>
-                            <constraint firstItem="zlo-rK-Do9" firstAttribute="top" secondItem="Jbu-25-n8F" secondAttribute="top" id="Kcz-Yy-2vG"/>
-                            <constraint firstItem="zlo-rK-Do9" firstAttribute="leading" secondItem="Jbu-25-n8F" secondAttribute="leading" id="vVN-Kf-URq"/>
-                            <constraint firstAttribute="trailing" secondItem="zlo-rK-Do9" secondAttribute="trailing" id="yKh-kT-eus"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="HotelWebView" destination="zlo-rK-Do9" id="CQ9-xd-kgr"/>
+                        <outlet property="carstation" destination="x2e-RQ-h2w" id="0XF-Hn-LuC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tHW-2t-wTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5012" y="-1016"/>
+            <point key="canvasLocation" x="4868" y="-1016.4917541229386"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="bFb-Ti-7N7">
@@ -613,7 +629,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-za-XCN">
-                                <rect key="frame" x="220" y="413" width="139" height="30"/>
+                                <rect key="frame" x="220" y="355" width="139" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="計算"/>
                                 <connections>
@@ -621,27 +637,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="予想料金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="301-Xz-CDg">
-                                <rect key="frame" x="24" y="422" width="261" height="21"/>
+                                <rect key="frame" x="24" y="360" width="261" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejf-q1-JbL">
-                                <rect key="frame" x="24" y="470" width="261" height="45"/>
+                                <rect key="frame" x="24" y="401" width="261" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Try-Yr-gVf">
-                                <rect key="frame" x="251" y="451" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="シミュレータ"/>
-                                <connections>
-                                    <segue destination="gtA-5y-Rlh" kind="show" id="nrs-xG-f0l"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="出発地設定(住所・施設名を入力)" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="btk-OM-XVQ" customClass="YoshikoTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="2" y="169" width="367" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -720,6 +728,14 @@
                                     <action selector="GetEnd:" destination="qDK-K9-yPq" eventType="editingDidEndOnExit" id="Rkl-Gi-Jvf"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Try-Yr-gVf">
+                                <rect key="frame" x="251" y="408" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="シミュレータ"/>
+                                <connections>
+                                    <segue destination="gtA-5y-Rlh" kind="show" id="nrs-xG-f0l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1534,12 +1550,26 @@
             </objects>
             <point key="canvasLocation" x="-812" y="-94.002998500749626"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="IdU-bF-bZL">
+            <objects>
+                <viewController id="2vA-eq-f57" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UHm-hO-SgX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DhR-lN-i9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5778" y="-1016"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background.jpg" width="63" height="111"/>
         <image name="burger" width="19" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z6R-od-pNi"/>
+        <segue reference="Eit-Wq-vzK"/>
     </inferredMetricsTieBreakers>
 </document>

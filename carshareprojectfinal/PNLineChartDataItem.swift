@@ -9,7 +9,7 @@
 import UIKit
 
 public class PNLineChartDataItem {
-    var y: CGFloat = 0.0
+    var y: CGFloat = -200.0
     
     public init() { }
     

@@ -40,11 +40,13 @@ class ChartViewController: UIViewController {
         barChart.strokeChart()
         barChart.center = self.view.center
         
-        let lineChart = PNLineChart(frame: CGRect(x: 0.0, y: 135.0, width: 320.0, height: 400.0))
+        var lineChart = PNLineChart(frame: CGRect(x: -100.0, y: -100.0, width: 450.0, height: 300.0))
+        let angle = CGFloat(M_PI / 2)
+        lineChart.transform  =  CGAffineTransform(rotationAngle: angle)
         lineChart.yLabelFormat = "%1f"
         lineChart.showLabel = true
         lineChart.backgroundColor = UIColor.clear
-        lineChart.xLabels = ["1", "2", "3", "4", "5", "6", "7","8","9","10"]
+        lineChart.xLabels = ["1", "2", "3", "4", "5", "6", "7","8","9","10","11","12"]
         lineChart.showCoordinateAxis = true
         lineChart.center = self.view.center
         print ("カウント数\(farepoints.count)")
@@ -55,7 +57,6 @@ class ChartViewController: UIViewController {
                 //1時間毎
                 if count.truncatingRemainder(dividingBy: 4.0) == 0.0{
                     dataArr.append(i)
-                    print ("aga")
                 }
                 count += 1.0
             }
@@ -91,3 +92,5 @@ class ChartViewController: UIViewController {
 
 
 }
+
+

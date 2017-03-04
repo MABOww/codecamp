@@ -27,6 +27,7 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
     //初期設定
     var itemDataArray = [ItemData]()
     var selectedInfo : String?
+    var selectednearestStation : String?
     var input = ""
     var checkindate = ""
     var checkoutdate = ""
@@ -55,6 +56,7 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
         let applicationId = Setkey.rakutenkey()
         items.removeAll()
         print (input)
+        connum = 0
         
         //ここは画面受け渡し
         let inputText = input
@@ -73,6 +75,7 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
         
         //じおコーディングAPI1の実施
         let queque = DispatchQueue.main
+        print("aa")
         queque.async {
             Alamofire.request(GetgeocoUrl).responseJSON{ response in
                 let json = JSON(response.result.value ?? 0)
@@ -85,6 +88,7 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
                 //print (lat)
                 //この中でホテル検索
                 queque.async {
+                    print("bb")
                     
                     //緯度経度取得
                     
@@ -289,31 +293,19 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
     //ここでデータの受け渡し
     override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         self.selectedInfo = items[indexPath.row]["hotelInformationUrl"].string
+        self.selectednearestStation  = items[indexPath.row]["nearestStation"].string
         itemUrl = self.selectedInfo!
-        print(itemUrl)
+        nearestStation = self.selectednearestStation!
+        print(itemUrl!)
         cnt+=1
         if cnt == 0{
             performSegue(withIdentifier: "toDetail", sender: nil)
         }
         
     }
-    
-    //    //商品をタップして次の画面に遷移する前の処理
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //
-    //        if (segue.identifier == "toDetail") {
-    //            let info: WebViewController = (segue.destination as? WebViewController)!
-    //
-    //        }
-    //
-    //    }
+
 }
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.selectedInfo = items[indexPath.row] as! String
-//        print("タップ")
-//        performSegue(withIdentifier: "toDetail", sender: nil)
-//    }
-//
+
 
 
 

@@ -22,4 +22,10 @@ class APIkey{
         return rakutenAPIkey
     }
     
+    //docomoAPIkeyの設定
+    func docomokey() -> String {
+        let docomoAPIkey = ""
+        return docomoAPIkey
+    }
+    
 }
