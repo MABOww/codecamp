@@ -8,12 +8,15 @@
 
 import UIKit
 
+var checkindate = ""
+var checkoutdate = ""
+var hotelname = ""
+
 class ChoiceViewController: UIViewController,UITextFieldDelegate  {
     
     let test = TableViewController()
     var tag : Int = 0
-    var checkindate : String?
-    var checkoutdate : String?
+
 
 
     @IBOutlet weak var bkimg: UIImageView!
@@ -21,12 +24,15 @@ class ChoiceViewController: UIViewController,UITextFieldDelegate  {
 
  
     @IBOutlet weak var textField: UITextField!
-
+    
     @IBOutlet weak var textField2: UITextField!
     
+    @IBOutlet weak var searchField: UITextField!
     
-  
-    @IBAction func pickerchoice(_ sender: Any) {
+
+    
+    @IBAction func pickerchoice(_ sender: UITextField) {
+        
         switch (sender as AnyObject).tag {
         case 0:
             tag = 0
@@ -43,16 +49,9 @@ class ChoiceViewController: UIViewController,UITextFieldDelegate  {
             textField2.inputView = myDatePicker
             textField2.inputAccessoryView = toolBar
         }
-
-        
     }
-    
-    
-    @IBOutlet weak var searchField: UITextField!
+  
 
-    
-    @IBAction func Staypoints(_ sender: Any) {
-    }
     
 
     //変数を宣言する
@@ -62,6 +61,12 @@ class ChoiceViewController: UIViewController,UITextFieldDelegate  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //エラー回避のため初期を入力欄の設定
+        textField.text = "日付を選択ください"
+        textField2.text = "日付を選択ください"
+        searchField.text = ""
+        
+        
         bkimg.image = UIImage(named: "travel.jpg")
         self.view.sendSubview(toBack: bkimg)
         textField.backgroundColor = UIColor.clear
@@ -91,12 +96,9 @@ class ChoiceViewController: UIViewController,UITextFieldDelegate  {
 
     }
 
-    @IBAction func test(_ sender: Any) {
-        /// Segueで遷移する際のメソッド
-  
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
 
     }
     
@@ -143,13 +145,17 @@ class ChoiceViewController: UIViewController,UITextFieldDelegate  {
         return date_formatter.string(from: date as Date)
     }
 
+    @IBAction func hotelname(_ sender: UITextField) {
+    }
 
     //ここで値の受け渡し
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let tableViewController:TableViewController = segue.destination as! TableViewController
+
         tableViewController.input = searchField.text!
-        tableViewController.checkindate = checkindate!
-        tableViewController.checkoutdate = checkoutdate!
+        tableViewController.checkindate = checkindate
+        tableViewController.checkoutdate = checkoutdate
     }
 
     

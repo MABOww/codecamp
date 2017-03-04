@@ -25,26 +25,23 @@ class CaluclatarViewController: UIViewController, UIPickerViewDelegate, UIPicker
     //初期設定
     
     @IBOutlet weak var StartPoint: UITextField!
-    
+
     @IBOutlet weak var EndPoint: UITextField!
-    
+   
+
     @IBOutlet weak var utilTime: UITextField!
     @IBOutlet weak var cailfare: UILabel!
     
-    //テキストフィールドをタップし画面遷移
-    @IBAction func SearchPoint(_ sender: Any) {
-        
-        //let SearchViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Next") as UIViewController
-        //
-        //        self.present(SearchViewController, animated: true, completion: nil)
-    }
+
+    //ここら辺はテキストフィールドの初期設定//
+    //エンターキーを押した際の動作
     //主発地テキストフィールドタップ時の動作
     @IBAction func getStart(_ sender: Any) {
     }
     //目的地テキストフィールドタップ時の動作
-    
     @IBAction func GetEnd(_ sender: Any) {
     }
+
     
     //初期値
     let key = APIkey()
@@ -197,6 +194,7 @@ class CaluclatarViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         var GetDirectionsUrl = DirectionsUrl + "origin=" + Start! + "&destination=" + End! + "&region=" + region + "&key=" + keyG
         var distanceval: Double = 0.0
+        print (GetDirectionsUrl)
 
         //ここから入力された２点間の距離を求める
         let queque = DispatchQueue.main
@@ -205,16 +203,16 @@ class CaluclatarViewController: UIViewController, UIPickerViewDelegate, UIPicker
             
             Alamofire.request(GetDirectionsUrl).responseJSON{response in
                 let json = JSON(response.result.value ?? 0)
-                //print (response)
+                print (json)
+                if  json["status"] != "INVALID_REQUEST"{
                 let routes = json["routes"]
                 let json2 = routes[0]
                 let legs = json2["legs"]
                 let json3 = legs[0]
                 let distance = json3["distance"]
-                //エラーハンドリング
-                if distance["value"].int != nil{
                 let distanceval = Double(distance["value"].int!)
                 }
+                
                 //
                 queque.async {
                     //ここで計算処理

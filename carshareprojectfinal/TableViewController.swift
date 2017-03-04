@@ -27,9 +27,9 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
     //初期設定
     var itemDataArray = [ItemData]()
     var selectedInfo : String?
-    var input : String?
-    var checkindate : String?
-    var checkoutdate : String?
+    var input = ""
+    var checkindate = ""
+    var checkoutdate = ""
     //    var lat : String?
     //    var lng : String?
     
@@ -50,15 +50,15 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         let appidG:String = Setkey.GoogleAPIkey()
         let applicationId = Setkey.rakutenkey()
         items.removeAll()
-        print (input!)
+        print (input)
         
         //ここは画面受け渡し
-        guard let inputText = input else {
-            return
-        }
+        let inputText = input
+      
         
         
         //入力文字数が0文字より多いかどうかチェックする
@@ -89,7 +89,7 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
                     //緯度経度取得
                     
                     //パラメータを指定する
-                    let parameter = ["applicationId": applicationId,"format":"json","checkinDate": self.checkindate!,"checkoutDate":self.checkoutdate!,"latitude":lat,"longitude":lng,"searchRadius":"1","datumType":"1"]
+                    let parameter = ["applicationId": applicationId,"format":"json","checkinDate": self.checkindate,"checkoutDate":self.checkoutdate,"latitude":lat,"longitude":lng,"searchRadius":"1","datumType":"1"]
                     
                     //ここでurlを作成
                     let url = self.Encodeinput(parameter: parameter as! [String : String])
