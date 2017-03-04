@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-var distanceval : String?
+
 //ピッカーで選択した
 var componentday : Int = 0
 var dayrrow : Int = 0
@@ -19,6 +19,9 @@ var hourrow : Int = 0
 var componenttime : Int = 0
 var timerow : Int = 0
 var utilhour: Double = 0
+var farelist = [Int]()
+var distanceval : Double = 0.0
+
 
 class CaluclatarViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIToolbarDelegate{
     
@@ -204,7 +207,7 @@ class CaluclatarViewController: UIViewController, UIPickerViewDelegate, UIPicker
             Alamofire.request(GetDirectionsUrl).responseJSON{response in
                 let json = JSON(response.result.value ?? 0)
                 print (json)
-                if  json["status"] != "INVALID_REQUEST"{
+                if  json["status"] == "OK"{
                 let routes = json["routes"]
                 let json2 = routes[0]
                 let legs = json2["legs"]
@@ -234,20 +237,24 @@ class CaluclatarViewController: UIViewController, UIPickerViewDelegate, UIPicker
 //    
     //ここで値の受け渡し
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        print ("a")
         let chartViewController:ChartViewController = segue.destination as! ChartViewController
         //グラフのx軸の数を取得
+        print("試験\(String(componenthour))")
         let timecalc = self.carshare.timecalc(componentday : componentday, dayrrow : dayrrow, componenthour : componenthour, hourrow : hourrow, componenttime : componenttime,timerow : timerow)
         
-        let farelist = self.carshare.faresimulation(datapoint : timecalc, distance : 20.0)
+        let farelist = self.carshare.faresimulation(datapoint : timecalc, distance : distanceval)
+        
         print (farelist)
+        
+        
+        print ("料金")
         //処理②利用料金を算出
         //self.timesfare = self.carshare.TimesSharingFare(time : Double(timecalc), distance : distanceval/1000 )
-        self.cailfare.text = String(self.timesfare)
         chartViewController.timepoints = timecalc
         chartViewController.farepoints = farelist
-        //tableViewController.input = searchField.text!
-        //tableViewController.checkindate = checkindate!
-        //tableViewController.checkoutdate = checkoutdate!
     }
 
     

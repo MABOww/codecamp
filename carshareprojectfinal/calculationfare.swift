@@ -54,7 +54,7 @@ class calculationfare{
         let distance = ceil(distance*2.0)
         var fareslist = [Int]()
         //ここで計算
-        for time in 1 ... datapoint {
+        for time in 0 ... datapoint {
             //最安値料金を算出
             var time = Double(time)
             if  time <= 24.0 {
@@ -85,7 +85,7 @@ class calculationfare{
             }
             //配列に料金をセット
             var fares = [Int(Fare_short), Int(Fare_Pack6),Int(Fare_Pack12),Int(Fare_Pack24)]
-            //print (fares)
+            print (fares)
             var Fare = fares[0]
             //print (fares)
             //料金計算
