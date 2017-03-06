@@ -66,6 +66,7 @@
 		FBA094541E69846D00453078 /* config2.csv in Resources */ = {isa = PBXBuildFile; fileRef = FBA094531E69846D00453078 /* config2.csv */; };
 		FBA094561E69847200453078 /* config.csv in Resources */ = {isa = PBXBuildFile; fileRef = FBA094551E69847200453078 /* config.csv */; };
 		FBA0945D1E6990FC00453078 /* APIkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA0945C1E6990FC00453078 /* APIkey.swift */; };
+		FBE3158A1E6DB47700B2E57A /* Configform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE315891E6DB47700B2E57A /* Configform.swift */; };
 		FBF556BD1E697A54000BDCFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF556BC1E697A54000BDCFA /* AppDelegate.swift */; };
 		FBF556BF1E697A54000BDCFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF556BE1E697A54000BDCFA /* ViewController.swift */; };
 		FBF556C51E697A55000BDCFA /* carshareprojectfinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBF556C31E697A55000BDCFA /* carshareprojectfinal.xcdatamodeld */; };
@@ -148,6 +149,7 @@
 		FBA094531E69846D00453078 /* config2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config2.csv; sourceTree = "<group>"; };
 		FBA094551E69847200453078 /* config.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.csv; sourceTree = "<group>"; };
 		FBA0945C1E6990FC00453078 /* APIkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIkey.swift; sourceTree = "<group>"; };
+		FBE315891E6DB47700B2E57A /* Configform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configform.swift; sourceTree = "<group>"; };
 		FBF556B91E697A54000BDCFA /* carshareprojectfinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carshareprojectfinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF556BC1E697A54000BDCFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF556BE1E697A54000BDCFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			children = (
 				FBF556BC1E697A54000BDCFA /* AppDelegate.swift */,
 				FB72EAE71E6A7FB2000B78B5 /* Button.swift */,
+				FBE315891E6DB47700B2E57A /* Configform.swift */,
 				FB72EAE31E6A5082000B78B5 /* ExampleTableViewController.swift */,
 				FB72EACC1E69C6BA000B78B5 /* Chart */,
 				FBA094571E698DD100453078 /* carsharecalculation */,
@@ -522,6 +525,7 @@
 				FB72EADD1E69C6E1000B78B5 /* PNGenericChart.swift in Sources */,
 				FBA0944C1E69845300453078 /* TableViewController.swift in Sources */,
 				FBF556BD1E697A54000BDCFA /* AppDelegate.swift in Sources */,
+				FBE3158A1E6DB47700B2E57A /* Configform.swift in Sources */,
 				FBF556C51E697A55000BDCFA /* carshareprojectfinal.xcdatamodeld in Sources */,
 				FBA0944E1E69845E00453078 /* ItemData.swift in Sources */,
 				FB72EAE41E6A5082000B78B5 /* ExampleTableViewController.swift in Sources */,
