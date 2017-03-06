@@ -71,11 +71,11 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
         
         let escapedValue = inputText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let GetgeocoUrl = self.geocoUrl + "&address=" + escapedValue! + "&key=" + appidG
-        print (GetgeocoUrl)
+
         
         //じおコーディングAPI1の実施
         let queque = DispatchQueue.main
-        print("aa")
+
         queque.async {
             Alamofire.request(GetgeocoUrl).responseJSON{ response in
                 let json = JSON(response.result.value ?? 0)
@@ -85,10 +85,10 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
                 let location = geometry["location"]
                 lat = String(describing: location["lat"].double!)
                 lng = String(describing: location["lng"].double!)
-                //print (lat)
+ 
                 //この中でホテル検索
                 queque.async {
-                    print("bb")
+
                     
                     //緯度経度取得
                     
@@ -277,7 +277,7 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
         //print (item)
         cell.itemTitleLabel?.text = items[indexPath.row]["hotelName"].string
         let number: Int = items[indexPath.row]["hotelMinCharge"].int!
-        cell.itemPriceLabel?.text = "最安値 : \(String(number))"
+        cell.itemPriceLabel?.text = "宿泊最安値 : \(String(number))"
         
         let url = NSURL(string: items[indexPath.row]["hotelImageUrl"].string!);
         //print (url!)

@@ -25,14 +25,10 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 			UIImage(named: "お金")!,
 			UIImage(named: "map")!,
 			UIImage(named: "trip")!,
-			UIImage(named: "profile")!,
-			UIImage(named: "profile")!,
 			UIImage(named: "star")!],
 			colors: [
 				UIColor(red: 240/255, green: 159/255, blue: 254/255, alpha: 1),
 				UIColor(red: 255/255, green: 137/255, blue: 167/255, alpha: 1),
-				UIColor(red: 126/255, green: 242/255, blue: 195/255, alpha: 1),
-				UIColor(red: 126/255, green: 242/255, blue: 195/255, alpha: 1),
 				UIColor(red: 126/255, green: 242/255, blue: 195/255, alpha: 1),
 				UIColor(red: 126/255, green: 242/255, blue: 195/255, alpha: 1),
 				UIColor(red: 119/255, green: 152/255, blue: 255/255, alpha: 1)],
@@ -43,9 +39,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 			2: {self.sidebar.dismissAnimated(true, completion: { finished in self.selectedIndex = 2}) },
 			3: {self.sidebar.dismissAnimated(true, completion: { finished in self.selectedIndex = 3}) },
 			4: {self.sidebar.dismissAnimated(true, completion: { finished in self.selectedIndex = 4}) },
-			5: {self.sidebar.dismissAnimated(true, completion: { finished in self.selectedIndex = 5}) },
-			6: {self.sidebar.dismissAnimated(true, completion: { finished in self.selectedIndex = 6}) },
-			7: {self.sidebar.dismissAnimated(true, completion: { finished in self.selectedIndex = 7}) }]
+			5: {self.sidebar.dismissAnimated(true, completion: { finished in self.selectedIndex = 5}) }]
 	}
 	
 }
