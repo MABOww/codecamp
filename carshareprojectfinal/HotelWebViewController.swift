@@ -13,15 +13,43 @@ import SwiftyJSON
 var itemUrl: String?
 var nearestStation: String?
 var stationList = [String]()
+var stationname = ""
 
 
 class HotelWebViewController: UIViewController {
+    
+    //実験エリア
+    var alert:UIAlertController!
+    
+    @IBAction func pushButton(_ sender: Any) {
+        
+        //アラートコントローラーを表示する。
+        self.present(alert, animated: true, completion:{
+            
+            //アラートコントローラーの親ビューのユーザー操作を許可する。
+            self.alert.view.superview?.isUserInteractionEnabled = true
+            
+            //アラートコントローラーにジェスチャーリコグナイザーを登録する。
+            self.alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("tapOutside")))
+        })
+    }
+    
+    //画面タップ時の呼び出しメソッド
+    func tapOutside(){
+        //モーダル表示しているビューコントローラーを閉じる。
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    //実験エリア
+    
     
     @IBOutlet weak var HotelWebView: UIWebView!
     //ステーション表示用のラベル
     @IBOutlet weak var carstation: UILabel!
     
+ 
     @IBOutlet weak var reservedurl: UILabel!
+    var linkUrl = "http://www.tour.ne.jp/j_rentacar/"
     
     
     //出発地点情報読み出し用の配列
@@ -33,7 +61,7 @@ class HotelWebViewController: UIViewController {
     let geocoUrl: String = "https://maps.googleapis.com/maps/api/geocode/json?"
     //ドコモ駅たん検索APIのURl
     let routeSearchURL : String = "https://api.apigw.smt.docomo.ne.jp/ekispertCorp/v1/searchCourseExtreme?APIKEY=&searchType=departure&sort=price&viaList="
-   //35.669107,139.6009514:35.4619297,139.5490379
+    //35.669107,139.6009514:35.4619297,139.5490379
     //出発地点の緯度経度
     var StartList = ""
     var EndList = ""
@@ -42,6 +70,11 @@ class HotelWebViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //実験
+        
+        
+        
+        
         
         //APIキーの取得
         let Setkey = APIkey()
@@ -49,6 +82,8 @@ class HotelWebViewController: UIViewController {
         var Geolat:String=""
         var Geolng:String=""
         //初期化
+        stationname = ""
+        self.reservedurl.text! = ""
         //CSVの読み込み(自宅情報を読み込み)
         do {
             //CSVファイルのパスを取得する。
@@ -138,21 +173,64 @@ class HotelWebViewController: UIViewController {
                                 //debugよう
                                 print ("数を数えるようー\(results_place.count)")
                                 if results_place.count > 0{
-                                    self.reservedurl.text! = self.reservedtimesURL
+                                    var url : NSString = self.reservedtimesURL as NSString
+                                    let urlStr : NSString = url.addingPercentEscapes(using: String.Encoding.utf8.rawValue)! as NSString
+                                    var searchURL : NSURL = NSURL(string: urlStr as String)!
+                                    
+                                    //self.reservedurl.text! = self.reservedtimesURL
+                                    self.linkUrl = "http://plus.timescar.jp/view/station/search.jsp"
+                                    //ここで近隣カーシェアの数を返却
+                                    self.carstation.text! = "宿泊先近くには\(results_place.count)件のカーシェアステーションがあります!!"
+                                }else{
+                                    self.carstation.text! = "宿泊先近くにはカーシエアはありません。"
+                                    stationname = ""
+                                    
                                 }
+                                
+                                
                                 //このループでステーションを取得
                                 for i in 0...results_place.count{
                                     let json2_place = results_place[i]
                                     let station = json2_place["name"].string
                                     if station != nil{
+                                        stationname += ("\(station!)\n")
                                         stationList.append(station!)
                                     }
                                 }
+                                //ここでアラートを作成
+                                //アラートコントローラーを作成する。
+                                self.alert = UIAlertController(title: self.carstation.text!, message: stationname, preferredStyle: .alert)
                                 
-                                //ここで近隣カーシェアの数を返却
-                                self.carstation.text! = "宿泊先近くには\(results_place.count)件のステーションがあります!!"
+                                //「続けるボタン」のアラートアクションを作成する。
+                                let alertAction = UIAlertAction(
+                                    title: "予約",
+                                    style: UIAlertActionStyle.default,
+                                    handler: { action in
+                                        
+                                        let url = NSURL(string: self.linkUrl)
+                                        if UIApplication.shared.canOpenURL(url! as URL){
+                                            UIApplication.shared.openURL(url! as URL)
+                                        }
+                                })
+                                
+                                
+                                //「キャンセルボタン」のアラートアクションを作成する。
+                                let alertAction2 = UIAlertAction(
+                                    title: "キャンセル",
+                                    style: UIAlertActionStyle.cancel,
+                                    handler: nil
+                                )
+                                
+                                //アラートアクションを追加する。
+                                self.alert.addAction(alertAction)
+                                self.alert.addAction(alertAction2)
+
+                                
+                                
+                                
+                                
                                 let GetrouteSearchURL = self.routeSearchURL + self.StartList + ":" + self.EndList
-                                print (GetrouteSearchURL)
+                                
                                 //ここでルート検索
                                 queque.async {
                                     Alamofire.request(GetrouteSearchURL).responseJSON{ response in
@@ -164,15 +242,15 @@ class HotelWebViewController: UIViewController {
                                         print (pricelist)
                                         //このループでステーションを取得
                                         for j in 0...pricelist.count{
-
+                                            
                                             let json2_fare = pricelist[j]
                                             //print (json2_fare)
-                                           if  json2_fare["Round"] != nil{
-//                                                if json2_fare["Round"].string! != nil{
-//                                                    let fare = json2_fare["Round"].string!
-//                                                    print (fare)
-//                                                }
-                                            print (json2_fare["Round"])
+                                            if  json2_fare["Round"] != nil{
+                                                //                                                if json2_fare["Round"].string! != nil{
+                                                //                                                    let fare = json2_fare["Round"].string!
+                                                //                                                    print (fare)
+                                                //                                                }
+                                                print (json2_fare["Round"])
                                             }
                                             
                                             
@@ -196,6 +274,12 @@ class HotelWebViewController: UIViewController {
     }
     
     
+    @IBAction func carsharesafari(_ sender: Any) {
+        let url = NSURL(string: linkUrl)
+        if UIApplication.shared.canOpenURL(url! as URL){
+            UIApplication.shared.openURL(url! as URL)
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
