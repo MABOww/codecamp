@@ -21,6 +21,7 @@ var cnt:Int = 0
 
 
 
+
 class TableViewController: UITableViewController,UISearchBarDelegate {
     
     var Setkey = APIkey()
@@ -35,12 +36,13 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
     //    var lng : String?
     
     //APIキーの設定(URL埋め込まない)
-
+    
     
     //リクエストURL
     let urlString = "https://app.rakuten.co.jp/services/api/Travel/VacantHotelSearch/20131024"
     let geocoUrl: String = "https://maps.googleapis.com/maps/api/geocode/json?"
     let rakutenUrl : String = "https://app.rakuten.co.jp/services/api/Travel/VacantHotelSearch/20131024?"
+    var inputText = ""
     
     
     
@@ -57,10 +59,10 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
         items.removeAll()
         print (input)
         connum = 0
-        
         //ここは画面受け渡し
-        let inputText = input
-      
+        inputText = ""
+        inputText = input
+        
         
         
         //入力文字数が0文字より多いかどうかチェックする
@@ -71,24 +73,26 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
         
         let escapedValue = inputText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let GetgeocoUrl = self.geocoUrl + "&address=" + escapedValue! + "&key=" + appidG
-
+        
         
         //じおコーディングAPI1の実施
         let queque = DispatchQueue.main
-
+        
         queque.async {
             Alamofire.request(GetgeocoUrl).responseJSON{ response in
                 let json = JSON(response.result.value ?? 0)
+                if json["status"] == "OK"{
                 let results = json["results"]
                 let json2 = results[0]
                 let geometry = json2["geometry"]
                 let location = geometry["location"]
                 lat = String(describing: location["lat"].double!)
                 lng = String(describing: location["lng"].double!)
- 
+                    }
+                
                 //この中でホテル検索
                 queque.async {
-
+                    
                     
                     //緯度経度取得
                     
@@ -104,14 +108,18 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
                     // APIでデータ取得
                     Alamofire.request(url).responseJSON{ response in
                         //print(response.result.value)
-                        let json = JSON(response.result.value ?? 0)
-                        json["hotels"].forEach{(_, data) in
-                            let type = data["hotel"]
-                            let hotel = type[0]
-                            items.append(hotel["hotelBasicInfo"])
-                            //print (items)
-                            connum = items.count
-                            self.tableView.reloadData()
+                        if json["error"] != "wrong_parameter"{
+                            let json = JSON(response.result.value ?? 0)
+                            print(json)
+                            json["hotels"].forEach{(_, data) in
+                                let type = data["hotel"]
+                                let hotel = type[0]
+                                items.append(hotel["hotelBasicInfo"])
+                                //print (items)
+                                connum = items.count
+                                self.tableView.reloadData()
+                            }}else{
+                                print ("a")
                         }
                     }
                 }
@@ -303,7 +311,7 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
         }
         
     }
-
+    
 }
 
 

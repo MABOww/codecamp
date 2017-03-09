@@ -52,6 +52,7 @@ class calculationfare{
     //時間に対する料金変動
     func faresimulation (datapoint : Int, distance : Double) -> Array<Int>{
         let distance = ceil(distance*2.0)
+        print (distance)
         var fareslist = [Int]()
         //ここで計算
         for time in 0 ... datapoint {
@@ -87,7 +88,6 @@ class calculationfare{
             var fares = [Int(Fare_short), Int(Fare_Pack6),Int(Fare_Pack12),Int(Fare_Pack24)]
             print (fares)
             var Fare = fares[0]
-            //print (fares)
             //料金計算
             for i in fares{
                 if i != 0{
@@ -163,6 +163,22 @@ class calculationfare{
             }
         }
         return Fare
+    }
+    
+    //カーシェア料金算出
+    func rentalcar(time:Double , distance : Double ) -> String{
+        var rentalfare = ""
+        if time <= 48.0{
+            rentalfare = "5,400〜6,500円"
+        }else if time > 48 && time <= 96 {
+            rentalfare = "7,000〜7,700円"
+        }else if time > 96 && time <= 196{
+            rentalfare = "14,000〜15,000円"
+        }else{
+            rentalfare = "20,000円以上"
+        }
+        
+        return rentalfare
     }
     
     

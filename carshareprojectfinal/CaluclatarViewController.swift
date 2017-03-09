@@ -27,6 +27,8 @@ class CaluclatarViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     //初期設定
     
+    @IBOutlet weak var distanetext: UILabel!
+ 
     @IBOutlet weak var StartPoint: UITextField!
 
     @IBOutlet weak var EndPoint: UITextField!
@@ -193,39 +195,48 @@ class CaluclatarViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         
         //エラーハンドリング処理はまだ
+
   
         
         var GetDirectionsUrl = DirectionsUrl + "origin=" + Start! + "&destination=" + End! + "&region=" + region + "&key=" + keyG
         var distanceval: Double = 0.0
-        print (GetDirectionsUrl)
+       // print (GetDirectionsUrl)
 
         //ここから入力された２点間の距離を求める
         let queque = DispatchQueue.main
+        let dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(1.0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+
         //処理①　APIの実行
         queque.async {
             
             Alamofire.request(GetDirectionsUrl).responseJSON{response in
                 let json = JSON(response.result.value ?? 0)
-                print (json)
                 if  json["status"] == "OK"{
                 let routes = json["routes"]
                 let json2 = routes[0]
                 let legs = json2["legs"]
                 let json3 = legs[0]
                 let distance = json3["distance"]
+
                 let distanceval = Double(distance["value"].int!)
+                self.distanetext.text! = "\(self.StartPoint.text!)〜\(self.EndPoint.text!)の往復料金"
+   
+                    }else{
+                    self.distanetext.text! = "入力地名エラー(時間計算のみ)"
+                    
                 }
-                
-                //
                 queque.async {
                     //ここで計算処理
                     //処理①利用時間の取得
-                    let timecalc = self.carshare.timecalc(componentday : componentday, dayrrow : dayrrow, componenthour : componenthour, hourrow : hourrow, componenttime : componenttime,timerow : timerow)
-                    print(distanceval)
-
-                    //処理②利用料金を算出
-                   self.timesfare = self.carshare.TimesSharingFare(time : Double(timecalc), distance : distanceval/1000 )
-                    self.cailfare.text = String(self.timesfare)
+                    DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
+                        let timecalc = self.carshare.timecalc(componentday : componentday, dayrrow : dayrrow, componenthour : componenthour, hourrow : hourrow, componenttime : componenttime,timerow : timerow)
+                        print(distanceval)
+                        
+                        //処理②利用料金を算出
+                        self.timesfare = self.carshare.TimesSharingFare(time : Double(timecalc), distance : distanceval/1000 )
+                        self.cailfare.text = String(self.timesfare)
+                    })
+                    
                 }
             }
             

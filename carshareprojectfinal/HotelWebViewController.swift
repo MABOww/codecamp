@@ -16,6 +16,7 @@ var stationList = [String]()
 var stationname = ""
 
 
+
 class HotelWebViewController: UIViewController {
     
     //実験エリア
@@ -70,7 +71,6 @@ class HotelWebViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //実験
         
         
         
@@ -178,7 +178,7 @@ class HotelWebViewController: UIViewController {
                                     var searchURL : NSURL = NSURL(string: urlStr as String)!
                                     
                                     //self.reservedurl.text! = self.reservedtimesURL
-                                    self.linkUrl = "http://plus.timescar.jp/view/station/search.jsp"
+                                    self.linkUrl = "http://plus.timescar.jp/view/sp/station/search.jsp"
                                     //ここで近隣カーシェアの数を返却
                                     self.carstation.text! = "宿泊先近くには\(results_place.count)件のカーシェアステーションがあります!!"
                                 }else{
@@ -197,13 +197,22 @@ class HotelWebViewController: UIViewController {
                                         stationList.append(station!)
                                     }
                                 }
+                                //料金見積もりカーシェア
+                                if predictfare != 0 {
+                                    stationname += ("カーシェア予想料金 : \(predictfare)円\n")
+                                }
+                                //料金見積もりカーシェア
+                                if rentalcarfare != "" {
+                                    stationname += ("レンタカー予想料金 : \(rentalcarfare)\n")
+                                }
+                                
                                 //ここでアラートを作成
                                 //アラートコントローラーを作成する。
                                 self.alert = UIAlertController(title: self.carstation.text!, message: stationname, preferredStyle: .alert)
                                 
                                 //「続けるボタン」のアラートアクションを作成する。
                                 let alertAction = UIAlertAction(
-                                    title: "予約",
+                                    title: "カーシァエア予約",
                                     style: UIAlertActionStyle.default,
                                     handler: { action in
                                         
@@ -213,9 +222,20 @@ class HotelWebViewController: UIViewController {
                                         }
                                 })
                                 
+                                let alertAction2 = UIAlertAction(
+                                    title: "レンタカー予約",
+                                    style: UIAlertActionStyle.default,
+                                    handler: { action in
+                                        
+                                        let urlrenta = NSURL(string: "http://travel.rakuten.co.jp/cars/")
+                                        if UIApplication.shared.canOpenURL(urlrenta! as URL){
+                                            UIApplication.shared.openURL(urlrenta! as URL)
+                                        }
+                                })
+                                
                                 
                                 //「キャンセルボタン」のアラートアクションを作成する。
-                                let alertAction2 = UIAlertAction(
+                                let alertAction3 = UIAlertAction(
                                     title: "キャンセル",
                                     style: UIAlertActionStyle.cancel,
                                     handler: nil
@@ -224,6 +244,7 @@ class HotelWebViewController: UIViewController {
                                 //アラートアクションを追加する。
                                 self.alert.addAction(alertAction)
                                 self.alert.addAction(alertAction2)
+                                self.alert.addAction(alertAction3)
 
                                 
                                 

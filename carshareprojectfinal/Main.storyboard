@@ -437,6 +437,7 @@
                     <navigationItem key="navigationItem" id="uKV-xV-WMH"/>
                     <connections>
                         <outlet property="bkimg" destination="TK3-ll-YZi" id="3d3-Mp-q9p"/>
+                        <outlet property="choiceTime" destination="def-P1-CNK" id="8Ma-Qu-Wnk"/>
                         <outlet property="searchField" destination="OYE-vh-Zwa" id="PPK-GW-dhg"/>
                         <outlet property="textField" destination="cLw-6B-u0i" id="TSK-3Q-cWI"/>
                         <outlet property="textField2" destination="Yoi-Sh-DB9" id="6gd-0c-07f"/>
@@ -446,7 +447,7 @@
             </objects>
             <point key="canvasLocation" x="2855" y="-1330"/>
         </scene>
-        <!--Root View Controller-->
+        <!--ホテル検索結果-->
         <scene sceneID="tRE-oI-cKC">
             <objects>
                 <tableViewController id="Sbd-Ng-p4D" customClass="TableViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
@@ -509,7 +510,7 @@
                             <outlet property="delegate" destination="Sbd-Ng-p4D" id="poc-U3-xx6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="uyK-1J-YVf"/>
+                    <navigationItem key="navigationItem" title="ホテル検索結果" id="uyK-1J-YVf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bC-bI-w28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -660,21 +661,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-za-XCN">
-                                <rect key="frame" x="220" y="355" width="139" height="30"/>
+                                <rect key="frame" x="220" y="406" width="139" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="計算"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="計算">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="calculation:" destination="qDK-K9-yPq" eventType="touchUpInside" id="czc-86-jvo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="予想料金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="301-Xz-CDg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="301-Xz-CDg">
                                 <rect key="frame" x="24" y="360" width="261" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejf-q1-JbL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejf-q1-JbL">
                                 <rect key="frame" x="24" y="401" width="261" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -760,7 +764,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Try-Yr-gVf">
-                                <rect key="frame" x="251" y="408" width="108" height="30"/>
+                                <rect key="frame" x="241" y="479" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="シミュレータ"/>
                                 <connections>
@@ -775,6 +779,7 @@
                         <outlet property="EndPoint" destination="e6C-AX-F2X" id="nkJ-F9-Ymr"/>
                         <outlet property="StartPoint" destination="btk-OM-XVQ" id="def-Tb-Wxs"/>
                         <outlet property="cailfare" destination="ejf-q1-JbL" id="TWa-5t-xrF"/>
+                        <outlet property="distanetext" destination="301-Xz-CDg" id="SoU-Gd-pVa"/>
                         <outlet property="utilTime" destination="3n6-Mc-PBe" id="nR5-TC-8HS"/>
                     </connections>
                 </viewController>
