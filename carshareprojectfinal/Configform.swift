@@ -57,23 +57,20 @@ class MyFormViewController: FormViewController {
                 row.title = "出発地設定①"
                 row.placeholder = "出発地を入力ください"
                 
-//                if dataList3 != nil {
-//                    row.value = dataList3[0]
-//                }
+                if dataList[0] != "" {
+                    row.value = dataList[0]
+                }
                 
                 }.onChange{row in
                     let userDefault = UserDefaults.standard
                     userDefault.setValue(row.value, forKey: "StartPoint")
             }
-            <<< TextRow(){
-                $0.title = "出発地設定②"
-                $0.placeholder = "出発地を入力ください"
-            }
+
             +++ Section("カーシェア情報の設定")
             <<< ActionSheetRow<String>() {
                 $0.title = "カーシァ会社選択"
-                $0.selectorTitle = "Pick a number"
-                $0.options = ["タイムズ","オリックス"]
+                $0.selectorTitle = "カーシェア会社を選択"
+                $0.options = ["タイムズ","オリックス","カレコ"]
                 $0.value = "タイムズ"    // initially selected
         }    }
 }

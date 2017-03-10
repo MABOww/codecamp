@@ -100,62 +100,6 @@
             <point key="canvasLocation" x="1333.5999999999999" y="170.46476761619192"/>
         </scene>
         <!--Item-->
-        <scene sceneID="ZlK-Wb-2aS">
-            <objects>
-                <viewController id="VA2-Zc-qCQ" customClass="ViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LDU-Sj-WQx"/>
-                        <viewControllerLayoutGuide type="bottom" id="RWE-EN-EgE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XSo-Uo-cvr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Kgs-SL-9NA">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="View Controller 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygk-EM-vOX">
-                                <rect key="frame" x="234" y="289" width="132" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-uS-t5o">
-                                <rect key="frame" x="20" y="40" width="19" height="18"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="burger"/>
-                                <connections>
-                                    <action selector="onBurger" destination="VA2-Zc-qCQ" eventType="touchUpInside" id="zth-Uy-7ja"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="rOG-uS-t5o" firstAttribute="leading" secondItem="XSo-Uo-cvr" secondAttribute="leading" constant="20" id="1OT-N3-lgu"/>
-                            <constraint firstItem="Kgs-SL-9NA" firstAttribute="top" secondItem="XSo-Uo-cvr" secondAttribute="top" id="9Wy-Kx-ZZ1"/>
-                            <constraint firstItem="Kgs-SL-9NA" firstAttribute="leading" secondItem="XSo-Uo-cvr" secondAttribute="leading" id="Ceu-ZS-Bui"/>
-                            <constraint firstAttribute="centerX" secondItem="ygk-EM-vOX" secondAttribute="centerX" id="DDR-cZ-UdU"/>
-                            <constraint firstAttribute="centerY" secondItem="ygk-EM-vOX" secondAttribute="centerY" id="DTV-Qb-3W6"/>
-                            <constraint firstItem="rOG-uS-t5o" firstAttribute="leading" secondItem="XSo-Uo-cvr" secondAttribute="leadingMargin" constant="20" id="MwS-ci-kD5"/>
-                            <constraint firstItem="rOG-uS-t5o" firstAttribute="top" secondItem="LDU-Sj-WQx" secondAttribute="bottom" constant="20" id="P5N-2L-GDa"/>
-                            <constraint firstAttribute="trailing" secondItem="Kgs-SL-9NA" secondAttribute="trailing" id="Ptf-6E-4D1"/>
-                            <constraint firstItem="rOG-uS-t5o" firstAttribute="top" secondItem="LDU-Sj-WQx" secondAttribute="bottom" constant="20" id="dfl-V7-Bq2"/>
-                            <constraint firstAttribute="bottom" secondItem="Kgs-SL-9NA" secondAttribute="bottom" id="kU2-2G-ws1"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="MwS-ci-kD5"/>
-                                <exclude reference="P5N-2L-GDa"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="prw-r2-Qt3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A23-rU-YIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1334" y="831"/>
-        </scene>
-        <!--Item-->
         <scene sceneID="Kq1-a8-fjM">
             <objects>
                 <viewController id="dyF-pl-TPO" customClass="ViewController" customModule="carshareprojectfinal" customModuleProvider="target" sceneMemberID="viewController">
@@ -205,9 +149,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GtQ-md-x7x">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="is7-xQ-eXG">
                                 <rect key="frame" x="20" y="40" width="19" height="18"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -233,12 +174,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="OxO-O2-uqr" secondAttribute="centerX" id="6I3-8m-zwG"/>
-                            <constraint firstAttribute="bottom" secondItem="GtQ-md-x7x" secondAttribute="bottom" id="6Jg-xP-WeL"/>
-                            <constraint firstItem="GtQ-md-x7x" firstAttribute="leading" secondItem="FC5-nb-nic" secondAttribute="leading" id="KsO-dD-Acu"/>
                             <constraint firstAttribute="centerY" secondItem="OxO-O2-uqr" secondAttribute="centerY" id="hhz-ZS-Ni6"/>
                             <constraint firstItem="is7-xQ-eXG" firstAttribute="leading" secondItem="FC5-nb-nic" secondAttribute="leading" constant="20" id="uSz-4m-dhT"/>
-                            <constraint firstAttribute="trailing" secondItem="GtQ-md-x7x" secondAttribute="trailing" id="vTP-3a-KWb"/>
-                            <constraint firstItem="GtQ-md-x7x" firstAttribute="top" secondItem="FC5-nb-nic" secondAttribute="top" id="xN4-sf-Dzv"/>
                             <constraint firstItem="is7-xQ-eXG" firstAttribute="top" secondItem="ZHE-c1-eli" secondAttribute="bottom" constant="20" id="zLW-jM-B9Z"/>
                         </constraints>
                     </view>
@@ -282,18 +219,17 @@
                         <segue destination="j5D-bS-emu" kind="relationship" relationship="viewControllers" id="Z6R-od-pNi"/>
                         <segue destination="wsn-Gr-6uq" kind="relationship" relationship="viewControllers" id="LdG-Bb-BD6"/>
                         <segue destination="dyF-pl-TPO" kind="relationship" relationship="viewControllers" id="W26-gX-5Ta"/>
-                        <segue destination="VA2-Zc-qCQ" kind="relationship" relationship="viewControllers" id="J7P-wG-Q9u"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHs-JP-c1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="400" y="380"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--ホテル検索withCar-->
         <scene sceneID="r2U-au-bHb">
             <objects>
-                <navigationController id="K3L-Xh-iZj" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DDM-Bl-Rpk">
+                <navigationController title="ホテル検索withCar" id="K3L-Xh-iZj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DDM-Bl-Rpk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -372,7 +308,7 @@
                                     <action selector="pickerchoice:" destination="UF0-rA-e3E" eventType="editingDidEnd" id="JHo-T5-Ufs"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="現地車利用時間" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="def-P1-CNK" customClass="YoshikoTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="現地車利用時間" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="def-P1-CNK" customClass="YoshikoTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="3" y="254" width="367" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.3021732271" green="0.26395642759999999" blue="0.55874562260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -424,9 +360,13 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA0-0g-6h0" customClass="Button" customModule="carshareprojectfinal" customModuleProvider="target">
-                                <rect key="frame" x="313" y="331" width="46" height="30"/>
+                                <rect key="frame" x="263" y="331" width="96" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="検索">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Sbd-Ng-p4D" kind="show" identifier="godetail" id="wcJ-QW-ep4"/>
                                 </connections>
@@ -445,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdw-Hs-ZGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2855" y="-1330"/>
+            <point key="canvasLocation" x="2853.5999999999999" y="-1330.4347826086957"/>
         </scene>
         <!--ホテル検索結果-->
         <scene sceneID="tRE-oI-cKC">
@@ -629,7 +569,7 @@
         <scene sceneID="nFa-d9-iKi">
             <objects>
                 <navigationController id="mcB-5A-gfG" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3cI-w4-L52">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3cI-w4-L52">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -660,26 +600,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-za-XCN">
-                                <rect key="frame" x="220" y="406" width="139" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="計算">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="calculation:" destination="qDK-K9-yPq" eventType="touchUpInside" id="czc-86-jvo"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="301-Xz-CDg">
-                                <rect key="frame" x="24" y="360" width="261" height="21"/>
+                                <rect key="frame" x="24" y="360" width="335" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejf-q1-JbL">
-                                <rect key="frame" x="24" y="401" width="261" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="予想料金 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejf-q1-JbL">
+                                <rect key="frame" x="24" y="401" width="335" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -764,11 +693,21 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Try-Yr-gVf">
-                                <rect key="frame" x="241" y="479" width="108" height="30"/>
+                                <rect key="frame" x="133" y="522" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="シミュレータ"/>
                                 <connections>
                                     <segue destination="gtA-5y-Rlh" kind="show" id="nrs-xG-f0l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-za-XCN">
+                                <rect key="frame" x="220" y="474" width="139" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="計算">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculation:" destination="qDK-K9-yPq" eventType="touchUpInside" id="czc-86-jvo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -785,7 +724,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6F5-z2-Low" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1789.5999999999999" y="2405.3973013493255"/>
+            <point key="canvasLocation" x="1752.8" y="2520.5397301349326"/>
         </scene>
         <!--Graphic View Controller-->
         <scene sceneID="5dS-6R-T5g">
@@ -911,7 +850,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background.jpg" width="63" height="111"/>
         <image name="burger" width="19" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>

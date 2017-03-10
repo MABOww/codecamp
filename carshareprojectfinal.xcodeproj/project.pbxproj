@@ -67,6 +67,7 @@
 		FBA094561E69847200453078 /* config.csv in Resources */ = {isa = PBXBuildFile; fileRef = FBA094551E69847200453078 /* config.csv */; };
 		FBA0945D1E6990FC00453078 /* APIkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA0945C1E6990FC00453078 /* APIkey.swift */; };
 		FBE3158A1E6DB47700B2E57A /* Configform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE315891E6DB47700B2E57A /* Configform.swift */; };
+		FBE3158E1E71815400B2E57A /* icon_014513_256.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE3158D1E71815400B2E57A /* icon_014513_256.png */; };
 		FBF556BD1E697A54000BDCFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF556BC1E697A54000BDCFA /* AppDelegate.swift */; };
 		FBF556BF1E697A54000BDCFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF556BE1E697A54000BDCFA /* ViewController.swift */; };
 		FBF556C51E697A55000BDCFA /* carshareprojectfinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBF556C31E697A55000BDCFA /* carshareprojectfinal.xcdatamodeld */; };
@@ -150,6 +151,7 @@
 		FBA094551E69847200453078 /* config.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.csv; sourceTree = "<group>"; };
 		FBA0945C1E6990FC00453078 /* APIkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIkey.swift; sourceTree = "<group>"; };
 		FBE315891E6DB47700B2E57A /* Configform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configform.swift; sourceTree = "<group>"; };
+		FBE3158D1E71815400B2E57A /* icon_014513_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_014513_256.png; sourceTree = "<group>"; };
 		FBF556B91E697A54000BDCFA /* carshareprojectfinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carshareprojectfinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF556BC1E697A54000BDCFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF556BE1E697A54000BDCFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				FBF556CB1E697A55000BDCFA /* Info.plist */,
 				FBA094201E6982BB00453078 /* picture */,
 				FBA0940B1E6980E700453078 /* gear@2x.png */,
+				FBE3158D1E71815400B2E57A /* icon_014513_256.png */,
 				FBA094071E6980E700453078 /* burger.png */,
 				FBA094091E6980E700453078 /* click.gif */,
 				FBA094231E6983BB00453078 /* map.png */,
@@ -399,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE3158E1E71815400B2E57A /* icon_014513_256.png in Resources */,
 				FBA094191E6980E700453078 /* globe@2x.png in Resources */,
 				FBA094321E6983BB00453078 /* travel.jpg in Resources */,
 				FBF556CA1E697A55000BDCFA /* LaunchScreen.storyboard in Resources */,

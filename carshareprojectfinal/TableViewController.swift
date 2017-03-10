@@ -24,6 +24,9 @@ var cnt:Int = 0
 
 class TableViewController: UITableViewController,UISearchBarDelegate {
     
+    //実験エリア
+    var alert2:UIAlertController!
+    
     var Setkey = APIkey()
     //初期設定
     var itemDataArray = [ItemData]()
@@ -32,6 +35,7 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
     var input = ""
     var checkindate = ""
     var checkoutdate = ""
+    var error : String?
     //    var lat : String?
     //    var lng : String?
     
@@ -88,8 +92,7 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
                 let location = geometry["location"]
                 lat = String(describing: location["lat"].double!)
                 lng = String(describing: location["lng"].double!)
-                    }
-                
+                }
                 //この中でホテル検索
                 queque.async {
                     
@@ -108,9 +111,10 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
                     // APIでデータ取得
                     Alamofire.request(url).responseJSON{ response in
                         //print(response.result.value)
-                        if json["error"] != "wrong_parameter"{
-                            let json = JSON(response.result.value ?? 0)
-                            print(json)
+                    let json = JSON(response.result.value ?? 0)
+                        self.error = "wrong_parameter"
+                        if json["error"].string != self.error || json["error"].string != "not_found" {
+                            print(json["error"])
                             json["hotels"].forEach{(_, data) in
                                 let type = data["hotel"]
                                 let hotel = type[0]
@@ -118,8 +122,27 @@ class TableViewController: UITableViewController,UISearchBarDelegate {
                                 //print (items)
                                 connum = items.count
                                 self.tableView.reloadData()
+                                print("b")
                             }}else{
-                                print ("a")
+                            //アラートコントローラーを表示する。
+                            self.present(self.alert2, animated: true, completion:{
+                                
+                                //アラートコントローラーの親ビューのユーザー操作を許可する。
+                                self.alert2.view.superview?.isUserInteractionEnabled = true
+                                
+                                //アラートコントローラーにジェスチャーリコグナイザーを登録する。
+                                self.alert2.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("tapOutside")))
+                            })
+                            
+                            //「キャンセルボタン」のアラートアクションを作成する。
+                            let alertAction3 = UIAlertAction(
+                                title: "キャンセル",
+                                style: UIAlertActionStyle.cancel,
+                                handler: nil
+                            )
+                            
+                            self.alert2.addAction(alertAction3)
+                            print ("1")
                         }
                     }
                 }

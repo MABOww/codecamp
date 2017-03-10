@@ -16,6 +16,8 @@ var rentalcarfare = ""
 
 class ChoiceViewController: UIViewController,UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIToolbarDelegate  {
     
+   
+    
     let test = TableViewController()
     let carshare = calculationfare()
     var tag : Int = 0
@@ -40,14 +42,14 @@ class ChoiceViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
         switch (sender as AnyObject).tag {
         case 0:
             tag = 0
-            textField.placeholder = dateToString(date: Date()) //<-`dateToString`のパラメータは`Date`型なので最初から`Date()`を渡す
+            //textField.placeholder = dateToString(date: Date()) //<-`dateToString`のパラメータは`Date`型なので最初から`Date()`を渡す
             textField.text        = dateToString(date: Date()) //<-同上
             self.view.addSubview(textField)
             textField.inputView = myDatePicker
             textField.inputAccessoryView = toolBar
         case 1:
             tag = 1
-            textField2.placeholder = dateToString(date: Date()) //<-`dateToString`のパラメータは`Date`型なので最初から`Date()`を渡す
+            //textField2.placeholder = dateToString(date: Date()) //<-`dateToString`のパラメータは`Date`型なので最初から`Date()`を渡す
             textField2.text        = dateToString(date: Date()) //<-同上
             self.view.addSubview(textField2)
             textField2.inputView = myDatePicker
@@ -74,6 +76,7 @@ class ChoiceViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.navigationItem.title = "ホテル検索 with Carshare"
         //時間選択
         //ここからpicker
         // UIPickerViewを生成.

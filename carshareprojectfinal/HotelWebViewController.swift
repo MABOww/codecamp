@@ -198,9 +198,11 @@ class HotelWebViewController: UIViewController {
                                     }
                                 }
                                 //料金見積もりカーシェア
-                                if predictfare != 0 {
-                                    stationname += ("カーシェア予想料金 : \(predictfare)円\n")
+                                if predictfare != 0 && results_place.count != 0{
+                                    stationname += ("\nカーシェア予想料金 :\(predictfare)円\n")
                                 }
+                                
+                                
                                 //料金見積もりカーシェア
                                 if rentalcarfare != "" {
                                     stationname += ("レンタカー予想料金 : \(rentalcarfare)\n")
@@ -210,17 +212,24 @@ class HotelWebViewController: UIViewController {
                                 //アラートコントローラーを作成する。
                                 self.alert = UIAlertController(title: self.carstation.text!, message: stationname, preferredStyle: .alert)
                                 
-                                //「続けるボタン」のアラートアクションを作成する。
-                                let alertAction = UIAlertAction(
-                                    title: "カーシァエア予約",
-                                    style: UIAlertActionStyle.default,
-                                    handler: { action in
-                                        
-                                        let url = NSURL(string: self.linkUrl)
-                                        if UIApplication.shared.canOpenURL(url! as URL){
-                                            UIApplication.shared.openURL(url! as URL)
-                                        }
-                                })
+                                if results_place.count != 0{
+                                    //「続けるボタン」のアラートアクションを作成する。
+                                    let alertAction = UIAlertAction(
+                                        title: "カーシァエア予約",
+                                        style: UIAlertActionStyle.default,
+                                        handler: { action in
+                                            
+                                            let url = NSURL(string: self.linkUrl)
+                                            if UIApplication.shared.canOpenURL(url! as URL){
+                                                UIApplication.shared.openURL(url! as URL)
+                                            }
+                                    })
+                                    self.alert.addAction(alertAction)
+
+                                
+                                }
+                                
+
                                 
                                 let alertAction2 = UIAlertAction(
                                     title: "レンタカー予約",
@@ -242,7 +251,7 @@ class HotelWebViewController: UIViewController {
                                 )
                                 
                                 //アラートアクションを追加する。
-                                self.alert.addAction(alertAction)
+     
                                 self.alert.addAction(alertAction2)
                                 self.alert.addAction(alertAction3)
 
